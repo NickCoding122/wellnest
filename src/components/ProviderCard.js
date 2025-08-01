@@ -29,8 +29,9 @@ const styles = StyleSheet.create({
   card: {
     flexDirection: 'row',
     backgroundColor: '#fff',
-    borderRadius: 8,
-    marginBottom: 12,
+    borderRadius: 12,
+    marginHorizontal: 20,
+    marginBottom: 15,
     overflow: 'hidden',
     elevation: 2,
     shadowColor: '#000',
@@ -39,12 +40,12 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
   },
   image: {
-    width: 100,
-    height: 100,
+    width: 110,
+    height: 110,
   },
   infoContainer: {
     flex: 1,
-    padding: 10,
+    padding: 12,
     justifyContent: 'center',
   },
   name: {

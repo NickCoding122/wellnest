@@ -7,6 +7,7 @@ import {
   StyleSheet,
   SafeAreaView,
 } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import { providers } from '../data/providers';
 import ProviderCard from '../components/ProviderCard';
 import CategoryFilter from '../components/CategoryFilter';
@@ -34,8 +35,11 @@ export default function HomeScreen({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.locationLabel}>Location</Text>
-        <Text style={styles.location}>London, UK</Text>
+        <Text style={styles.title}>Wellnest</Text>
+        <View style={styles.locationContainer}>
+          <Ionicons name="location-sharp" size={16} color="#fff" />
+          <Text style={styles.location}>London, UK</Text>
+        </View>
       </View>
       <TextInput
         style={styles.search}
@@ -70,28 +74,42 @@ const styles = StyleSheet.create({
     backgroundColor: '#f5f5f5',
   },
   header: {
-    padding: 20,
-    backgroundColor: '#fff',
-    borderBottomWidth: 1,
-    borderBottomColor: '#eee',
+    paddingTop: 30,
+    paddingBottom: 20,
+    paddingHorizontal: 20,
+    backgroundColor: '#1E90FF',
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20,
   },
-  locationLabel: {
-    fontSize: 12,
-    color: '#999',
+  title: {
+    color: '#fff',
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 4,
+  },
+  locationContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   location: {
-    fontSize: 18,
-    fontWeight: 'bold',
+    color: '#fff',
+    fontSize: 16,
+    marginLeft: 4,
   },
   search: {
     height: 45,
-    marginHorizontal: 10,
-    marginTop: 10,
-    marginBottom: 5,
-    borderRadius: 8,
+    marginHorizontal: 20,
+    marginTop: 15,
+    marginBottom: 10,
+    borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#ccc',
-    paddingHorizontal: 12,
+    borderColor: '#ddd',
+    paddingHorizontal: 15,
     backgroundColor: '#fff',
+    shadowColor: '#000',
+    shadowOpacity: 0.05,
+    shadowRadius: 5,
+    shadowOffset: { width: 0, height: 2 },
+    elevation: 2,
   },
 });

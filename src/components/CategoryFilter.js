@@ -34,15 +34,21 @@ export default function CategoryFilter({ categories, selectedCategory, onSelect 
 
 const styles = StyleSheet.create({
   container: {
-    marginVertical: 10,
-    paddingHorizontal: 10,
+    marginTop: 10,
+    marginBottom: 15,
+    paddingHorizontal: 20,
   },
   chip: {
     backgroundColor: '#f0f0f0',
     borderRadius: 20,
-    paddingHorizontal: 12,
+    paddingHorizontal: 14,
     paddingVertical: 8,
-    marginRight: 8,
+    marginRight: 10,
+    shadowColor: '#000',
+    shadowOpacity: 0.05,
+    shadowRadius: 3,
+    shadowOffset: { width: 0, height: 2 },
+    elevation: 1,
   },
   chipText: {
     fontSize: 14,
